@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/ahb_test/ahb_test_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/ahb_env/top.sv" into library work
+INFO: [VRFC 10-311] analyzing module top

@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# xsim v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Mon Oct 20 20:16:46 2025
+# Process ID         : 51005
+# Current directory  : /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/sim
+# Command line       : xsim -log ahb_crt_test_sim.log -mode tcl -source {xsim.dir/top/xsim_script.tcl}
+# Log file           : /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/sim/ahb_crt_test_sim.log
+# Journal file       : /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/sim/xsim.jou
+# Running On         : beratgokaytopcu-LOQ-15IRH8
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13420H
+# CPU Frequency      : 4549.731 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 12
+# Host memory        : 16479 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20774 MB
+# Available Virtual  : 12588 MB
+#-----------------------------------------------------------
+source xsim.dir/top/xsim_script.tcl
+run -all

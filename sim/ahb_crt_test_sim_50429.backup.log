@@ -1,0 +1,1782 @@
+#-----------------------------------------------------------
+# xsim v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Mon Oct 20 20:15:30 2025
+# Process ID         : 50429
+# Current directory  : /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/sim
+# Command line       : xsim -log ahb_crt_test_sim.log -mode tcl -source {xsim.dir/top/xsim_script.tcl}
+# Log file           : /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/sim/ahb_crt_test_sim.log
+# Journal file       : /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/sim/xsim.jou
+# Running On         : beratgokaytopcu-LOQ-15IRH8
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13420H
+# CPU Frequency      : 4507.276 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 12
+# Host memory        : 16479 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20774 MB
+# Available Virtual  : 12393 MB
+#-----------------------------------------------------------
+source xsim.dir/top/xsim_script.tcl
+# xsim {top} -testplusarg UVM_OBJECTION_TRACE -testplusarg UVM_TESTNAME=ahb_crt_test -testplusarg UVM_VERBOSITY=UVM_LOW -wdb {ahb_crt_test.wdb} -autoloadwcfg -runall -sv_seed 16422201
+Time resolution is 1 ps
+run -all
+UVM_INFO /tools/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO /tools/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO @ 0: reporter [RNTST] Running test ahb_crt_test...
+--------------------------------------------------------------
+Name                       Type                    Size  Value
+--------------------------------------------------------------
+uvm_test_top               ahb_crt_test            -     @344 
+  env_h                    ahb_env                 -     @363 
+    ahb_coverage_h         ahb_coverage            -     @453 
+      analysis_imp         uvm_analysis_imp        -     @462 
+    ahb_master_ap          uvm_analysis_port       -     @372 
+    ahb_slave_ap           uvm_analysis_port       -     @382 
+    master_agent_h         ahb_magent              -     @415 
+      agent_ap             uvm_analysis_port       -     @424 
+      mdriver_h            ahb_mdriver             -     @635 
+        rsp_port           uvm_analysis_port       -     @654 
+        seq_item_port      uvm_seq_item_pull_port  -     @644 
+      mmonitor_h           ahb_mmonitor            -     @616 
+        monitor_ap         uvm_analysis_port       -     @625 
+      mseqr_h              ahb_mseqr               -     @664 
+        rsp_export         uvm_analysis_export     -     @673 
+        seq_item_export    uvm_seq_item_pull_imp   -     @791 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    reset_agent_h          reset_agent             -     @406 
+      driver_h             reset_driver            -     @809 
+        rsp_port           uvm_analysis_port       -     @828 
+        seq_item_port      uvm_seq_item_pull_port  -     @818 
+      reset_seqr_h         reset_seqr              -     @838 
+        rsp_export         uvm_analysis_export     -     @847 
+        seq_item_export    uvm_seq_item_pull_imp   -     @965 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    slave_agent_h          ahb_sagent              -     @434 
+      agent_ap             uvm_analysis_port       -     @443 
+      sdriver_h            ahb_sdriver             -     @1002
+        rsp_port           uvm_analysis_port       -     @1021
+        seq_item_port      uvm_seq_item_pull_port  -     @1011
+      smonitor_h           ahb_smonitor            -     @983 
+        monitor_ap         uvm_analysis_port       -     @992 
+      sseqr_h              ahb_sseqr               -     @1031
+        rsp_export         uvm_analysis_export     -     @1040
+        seq_item_export    uvm_seq_item_pull_imp   -     @1158
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    vseqr_h                ahb_vseqr               -     @472 
+      rsp_export           uvm_analysis_export     -     @481 
+      seq_item_export      uvm_seq_item_pull_imp   -     @599 
+      arbitration_queue    array                   0     -    
+      lock_queue           array                   0     -    
+      num_last_reqs        integral                32    'd1  
+      num_last_rsps        integral                32    'd1  
+--------------------------------------------------------------
+UVM_INFO /tools/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+------------------------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                               
+------------------------------------------------------------------------------------------------------------
+req                            ahb_mxtn           -     @1698                                               
+  reset                        integral           1     'h1                                                 
+  trans_type                   array(transfer_t)  32    -                                                   
+    [0]                        transfer_t         2     NONSEQ                                              
+    [1]                        transfer_t         2     BUSY                                                
+    [2]                        transfer_t         2     BUSY                                                
+    [3]                        transfer_t         2     BUSY                                                
+    [4]                        transfer_t         2     SEQ                                                 
+    ...                        ...                ...   ...                                                 
+    [27]                       transfer_t         2     SEQ                                                 
+    [28]                       transfer_t         2     SEQ                                                 
+    [29]                       transfer_t         2     SEQ                                                 
+    [30]                       transfer_t         2     BUSY                                                
+    [31]                       transfer_t         2     SEQ                                                 
+  address                      da(integral)       16    -                                                   
+    [0]                        integral           32    'h24f57b0a                                          
+    [1]                        integral           32    'h2                                                 
+    [2]                        integral           32    'h2                                                 
+    [3]                        integral           32    'h2                                                 
+    [4]                        integral           32    'h2                                                 
+    ...                        ...                ...   ...                                                 
+    [11]                       integral           32    'h2                                                 
+    [12]                       integral           32    'h2                                                 
+    [13]                       integral           32    'h2                                                 
+    [14]                       integral           32    'h2                                                 
+    [15]                       integral           32    'h2                                                 
+  trans_size                   size_t             3     HALFWORD                                            
+  burst_mode                   burst_t            3     WRAP16                                              
+  read_write                   rw_t               1     WRITE                                               
+  write_data                   da(integral)       16    -                                                   
+    [0]                        integral           32    'hf0224d26                                          
+    [1]                        integral           32    'hafc215e3                                          
+    [2]                        integral           32    'hcfab847d                                          
+    [3]                        integral           32    'he3c074f8                                          
+    [4]                        integral           32    'hf56311e0                                          
+    ...                        ...                ...   ...                                                 
+    [11]                       integral           32    'hd2a7cb13                                          
+    [12]                       integral           32    'hfef5211d                                          
+    [13]                       integral           32    'hcb0ccd4f                                          
+    [14]                       integral           32    'h382d2a1a                                          
+    [15]                       integral           32    'hdc39da50                                          
+  response                     resp_t             2     OKAY                                                
+  read_data                    integral           32    'h0                                                 
+  begin_time                   time               64    210000                                              
+  depth                        int                32    'd2                                                 
+  parent sequence (name)       string             10    crt_mseq_h                                          
+  parent sequence (full name)  string             52    uvm_test_top.env_h.master_agent_h.mseqr_h.crt_mseq_h
+  sequencer                    string             41    uvm_test_top.env_h.master_agent_h.mseqr_h           
+------------------------------------------------------------------------------------------------------------
+--------------------------------------------
+Name          Type          Size  Value     
+--------------------------------------------
+xtn           ahb_sxtn      -     @1710     
+  reset       integral      1     'h0       
+  ready       da(integral)  0     -         
+  address     da(integral)  1     -         
+    [0]       integral      32    'h24f57b0a
+  write_data  da(integral)  1     -         
+    [0]       integral      32    'h0       
+  trans_type  transfer_t    2     NONSEQ    
+  burst_mode  burst_t       3     WRAP16    
+  read_write  rw_t          1     WRITE     
+  trans_size  size_t        3     HALFWORD  
+  read_data   da(integral)  0     -         
+  response    resp_t        2     OKAY      
+--------------------------------------------
+-------------------------------------------------
+Name          Type               Size  Value     
+-------------------------------------------------
+xtn           ahb_mxtn           -     @1706     
+  reset       integral           1     'h0       
+  trans_type  array(transfer_t)  1     -         
+    [0]       transfer_t         2     NONSEQ    
+  address     da(integral)       1     -         
+    [0]       integral           32    'h24f57b0a
+  trans_size  size_t             3     HALFWORD  
+  burst_mode  burst_t            3     WRAP16    
+  read_write  rw_t               1     WRITE     
+  write_data  da(integral)       1     -         
+    [0]       integral           32    'hf0224d26
+  response    resp_t             2     OKAY      
+  read_data   integral           32    'h0       
+-------------------------------------------------
+-------------------------------------------------
+Name          Type               Size  Value     
+-------------------------------------------------
+xtn           ahb_mxtn           -     @1718     
+  reset       integral           1     'h0       
+  trans_type  array(transfer_t)  1     -         
+    [0]       transfer_t         2     BUSY      
+  address     da(integral)       1     -         
+    [0]       integral           32    'h2       
+  trans_size  size_t             3     HALFWORD  
+  burst_mode  burst_t            3     WRAP16    
+  read_write  rw_t               1     WRITE     
+  write_data  da(integral)       1     -         
+    [0]       integral           32    'hafc215e3
+  response    resp_t             2     OKAY      
+  read_data   integral           32    'h0       
+-------------------------------------------------
+ERROR: Assertion failed. 
+Time: 470 ns Started: 470 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:301
+-------------------------------------------------
+Name          Type               Size  Value     
+-------------------------------------------------
+xtn           ahb_mxtn           -     @1722     
+  reset       integral           1     'h0       
+  trans_type  array(transfer_t)  1     -         
+    [0]       transfer_t         2     SEQ       
+  address     da(integral)       1     -         
+    [0]       integral           32    'h2       
+  trans_size  size_t             3     HALFWORD  
+  burst_mode  burst_t            3     WRAP16    
+  read_write  rw_t               1     WRITE     
+  write_data  da(integral)       1     -         
+    [0]       integral           32    'he3c074f8
+  response    resp_t             2     OKAY      
+  read_data   integral           32    'h0       
+-------------------------------------------------
+ERROR: Assertion failed. 
+Time: 630 ns Started: 630 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:301
+ERROR: Assertion failed. 
+Time: 650 ns Started: 650 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:301
+-------------------------------------------------
+Name          Type               Size  Value     
+-------------------------------------------------
+xtn           ahb_mxtn           -     @1726     
+  reset       integral           1     'h0       
+  trans_type  array(transfer_t)  1     -         
+    [0]       transfer_t         2     SEQ       
+  address     da(integral)       1     -         
+    [0]       integral           32    'h2       
+  trans_size  size_t             3     HALFWORD  
+  burst_mode  burst_t            3     WRAP16    
+  read_write  rw_t               1     WRITE     
+  write_data  da(integral)       1     -         
+    [0]       integral           32    'had82a34f
+  response    resp_t             2     OKAY      
+  read_data   integral           32    'h0       
+-------------------------------------------------
+------------------------------------------------
+Name          Type               Size  Value    
+------------------------------------------------
+xtn           ahb_mxtn           -     @1730    
+  reset       integral           1     'h0      
+  trans_type  array(transfer_t)  1     -        
+    [0]       transfer_t         2     BUSY     
+  address     da(integral)       1     -        
+    [0]       integral           32    'h2      
+  trans_size  size_t             3     HALFWORD 
+  burst_mode  burst_t            3     WRAP16   
+  read_write  rw_t               1     WRITE    
+  write_data  da(integral)       1     -        
+    [0]       integral           32    'h1c6f950
+  response    resp_t             2     OKAY     
+  read_data   integral           32    'h0      
+------------------------------------------------
+-------------------------------------------------
+Name          Type               Size  Value     
+-------------------------------------------------
+xtn           ahb_mxtn           -     @1738     
+  reset       integral           1     'h0       
+  trans_type  array(transfer_t)  1     -         
+    [0]       transfer_t         2     BUSY      
+  address     da(integral)       1     -         
+    [0]       integral           32    'h2       
+  trans_size  size_t             3     HALFWORD  
+  burst_mode  burst_t            3     WRAP16    
+  read_write  rw_t               1     WRITE     
+  write_data  da(integral)       1     -         
+    [0]       integral           32    'he5855f06
+  response    resp_t             2     OKAY      
+  read_data   integral           32    'h0       
+-------------------------------------------------
+ERROR: Assertion failed. 
+Time: 850 ns Started: 850 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:301
+-------------------------------------------------
+Name          Type               Size  Value     
+-------------------------------------------------
+xtn           ahb_mxtn           -     @1742     
+  reset       integral           1     'h0       
+  trans_type  array(transfer_t)  1     -         
+    [0]       transfer_t         2     SEQ       
+  address     da(integral)       1     -         
+    [0]       integral           32    'h2       
+  trans_size  size_t             3     HALFWORD  
+  burst_mode  burst_t            3     WRAP16    
+  read_write  rw_t               1     WRITE     
+  write_data  da(integral)       1     -         
+    [0]       integral           32    'hd1727dcd
+  response    resp_t             2     OKAY      
+  read_data   integral           32    'h0       
+-------------------------------------------------
+ERROR: Assertion failed. 
+Time: 870 ns Started: 870 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:301
+-------------------------------------------------
+Name          Type               Size  Value     
+-------------------------------------------------
+xtn           ahb_mxtn           -     @1746     
+  reset       integral           1     'h0       
+  trans_type  array(transfer_t)  1     -         
+    [0]       transfer_t         2     BUSY      
+  address     da(integral)       1     -         
+    [0]       integral           32    'h2       
+  trans_size  size_t             3     HALFWORD  
+  burst_mode  burst_t            3     WRAP16    
+  read_write  rw_t               1     WRITE     
+  write_data  da(integral)       1     -         
+    [0]       integral           32    'hc945d3ff
+  response    resp_t             2     OKAY      
+  read_data   integral           32    'h0       
+-------------------------------------------------
+ERROR: Assertion failed. 
+Time: 970 ns Started: 970 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:301
+-------------------------------------------------
+Name          Type               Size  Value     
+-------------------------------------------------
+xtn           ahb_mxtn           -     @1750     
+  reset       integral           1     'h0       
+  trans_type  array(transfer_t)  1     -         
+    [0]       transfer_t         2     SEQ       
+  address     da(integral)       1     -         
+    [0]       integral           32    'h2       
+  trans_size  size_t             3     HALFWORD  
+  burst_mode  burst_t            3     WRAP16    
+  read_write  rw_t               1     WRITE     
+  write_data  da(integral)       1     -         
+    [0]       integral           32    'hfef5211d
+  response    resp_t             2     OKAY      
+  read_data   integral           32    'h0       
+-------------------------------------------------
+ERROR: Assertion failed. 
+Time: 990 ns Started: 990 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:301
+ERROR: Assertion failed. 
+Time: 1010 ns Started: 1010 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:301
+-------------------------------------------------
+Name          Type               Size  Value     
+-------------------------------------------------
+xtn           ahb_mxtn           -     @1754     
+  reset       integral           1     'h0       
+  trans_type  array(transfer_t)  1     -         
+    [0]       transfer_t         2     SEQ       
+  address     da(integral)       1     -         
+    [0]       integral           32    'h2       
+  trans_size  size_t             3     HALFWORD  
+  burst_mode  burst_t            3     WRAP16    
+  read_write  rw_t               1     WRITE     
+  write_data  da(integral)       1     -         
+    [0]       integral           32    'h382d2a1a
+  response    resp_t             2     OKAY      
+  read_data   integral           32    'h0       
+-------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                               
+------------------------------------------------------------------------------------------------------------
+req                            ahb_mxtn           -     @1773                                               
+  reset                        integral           1     'h1                                                 
+  trans_type                   array(transfer_t)  1     -                                                   
+    [0]                        transfer_t         2     IDLE                                                
+  address                      da(integral)       1     -                                                   
+    [0]                        integral           32    'h23e21a7c                                          
+  trans_size                   size_t             3     WORD                                                
+  burst_mode                   burst_t            3     SINGLE                                              
+  read_write                   rw_t               1     WRITE                                               
+  write_data                   da(integral)       1     -                                                   
+    [0]                        integral           32    'hd0a618b5                                          
+  response                     resp_t             2     OKAY                                                
+  read_data                    integral           32    'h0                                                 
+  begin_time                   time               64    1050000                                             
+  depth                        int                32    'd2                                                 
+  parent sequence (name)       string             10    crt_mseq_h                                          
+  parent sequence (full name)  string             52    uvm_test_top.env_h.master_agent_h.mseqr_h.crt_mseq_h
+  sequencer                    string             41    uvm_test_top.env_h.master_agent_h.mseqr_h           
+------------------------------------------------------------------------------------------------------------
+--------------------------------------------
+Name          Type          Size  Value     
+--------------------------------------------
+xtn           ahb_sxtn      -     @1714     
+  reset       integral      1     'h0       
+  ready       da(integral)  0     -         
+  address     da(integral)  16    -         
+    [0]       integral      32    'h24f57b0a
+    [1]       integral      32    'h2       
+    [2]       integral      32    'h2       
+    [3]       integral      32    'h2       
+    [4]       integral      32    'h2       
+    ...       ...           ...   ...       
+    [11]      integral      32    'h2       
+    [12]      integral      32    'h2       
+    [13]      integral      32    'h2       
+    [14]      integral      32    'h2       
+    [15]      integral      32    'h2       
+  write_data  da(integral)  16    -         
+    [0]       integral      32    'hf0224d26
+    [1]       integral      32    'hafc215e3
+    [2]       integral      32    'hcfab847d
+    [3]       integral      32    'he3c074f8
+    [4]       integral      32    'hf56311e0
+    ...       ...           ...   ...       
+    [11]      integral      32    'hd2a7cb13
+    [12]      integral      32    'hfef5211d
+    [13]      integral      32    'hcb0ccd4f
+    [14]      integral      32    'h382d2a1a
+    [15]      integral      32    'hdc39da50
+  trans_type  transfer_t    2     SEQ       
+  burst_mode  burst_t       3     WRAP16    
+  read_write  rw_t          1     WRITE     
+  trans_size  size_t        3     HALFWORD  
+  read_data   da(integral)  0     -         
+  response    resp_t        2     OKAY      
+--------------------------------------------
+------------------------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                               
+------------------------------------------------------------------------------------------------------------
+req                            ahb_mxtn           -     @1795                                               
+  reset                        integral           1     'h1                                                 
+  trans_type                   array(transfer_t)  32    -                                                   
+    [0]                        transfer_t         2     NONSEQ                                              
+    [1]                        transfer_t         2     BUSY                                                
+    [2]                        transfer_t         2     SEQ                                                 
+    [3]                        transfer_t         2     BUSY                                                
+    [4]                        transfer_t         2     SEQ                                                 
+    ...                        ...                ...   ...                                                 
+    [27]                       transfer_t         2     SEQ                                                 
+    [28]                       transfer_t         2     BUSY                                                
+    [29]                       transfer_t         2     BUSY                                                
+    [30]                       transfer_t         2     SEQ                                                 
+    [31]                       transfer_t         2     SEQ                                                 
+  address                      da(integral)       16    -                                                   
+    [0]                        integral           32    'h1d886828                                          
+    [1]                        integral           32    'he105f0f8                                          
+    [2]                        integral           32    'h4                                                 
+    [3]                        integral           32    'h4                                                 
+    [4]                        integral           32    'h4                                                 
+    ...                        ...                ...   ...                                                 
+    [11]                       integral           32    'h4                                                 
+    [12]                       integral           32    'h4                                                 
+    [13]                       integral           32    'h4                                                 
+    [14]                       integral           32    'h4                                                 
+    [15]                       integral           32    'h4                                                 
+  trans_size                   size_t             3     WORD                                                
+  burst_mode                   burst_t            3     WRAP16                                              
+  read_write                   rw_t               1     READ                                                
+  write_data                   da(integral)       16    -                                                   
+    [0]                        integral           32    'h8659c4af                                          
+    [1]                        integral           32    'h8e9c472f                                          
+    [2]                        integral           32    'heb8e2134                                          
+    [3]                        integral           32    'hb2562103                                          
+    [4]                        integral           32    'hdfd00a35                                          
+    ...                        ...                ...   ...                                                 
+    [11]                       integral           32    'h14ac0af2                                          
+    [12]                       integral           32    'he61e75f3                                          
+    [13]                       integral           32    'hecd08b1b                                          
+    [14]                       integral           32    'hfad5d9d7                                          
+    [15]                       integral           32    'h1afa76b0                                          
+  response                     resp_t             2     OKAY                                                
+  read_data                    integral           32    'h0                                                 
+  begin_time                   time               64    1070000                                             
+  depth                        int                32    'd2                                                 
+  parent sequence (name)       string             10    crt_mseq_h                                          
+  parent sequence (full name)  string             52    uvm_test_top.env_h.master_agent_h.mseqr_h.crt_mseq_h
+  sequencer                    string             41    uvm_test_top.env_h.master_agent_h.mseqr_h           
+------------------------------------------------------------------------------------------------------------
+-------------------------------------------------
+Name          Type               Size  Value     
+-------------------------------------------------
+xtn           ahb_mxtn           -     @1803     
+  reset       integral           1     'h0       
+  trans_type  array(transfer_t)  1     -         
+    [0]       transfer_t         2     BUSY      
+  address     da(integral)       1     -         
+    [0]       integral           32    'he105f0f8
+  trans_size  size_t             3     WORD      
+  burst_mode  burst_t            3     WRAP16    
+  read_write  rw_t               1     READ      
+  write_data  da(integral)       1     -         
+    [0]       integral           32    'h0       
+  response    resp_t             2     OKAY      
+  read_data   integral           32    'h0       
+-------------------------------------------------
+---------------------------------------------
+Name          Type               Size  Value 
+---------------------------------------------
+xtn           ahb_mxtn           -     @1807 
+  reset       integral           1     'h0   
+  trans_type  array(transfer_t)  1     -     
+    [0]       transfer_t         2     BUSY  
+  address     da(integral)       1     -     
+    [0]       integral           32    'h4   
+  trans_size  size_t             3     WORD  
+  burst_mode  burst_t            3     WRAP16
+  read_write  rw_t               1     READ  
+  write_data  da(integral)       1     -     
+    [0]       integral           32    'h0   
+  response    resp_t             2     OKAY  
+  read_data   integral           32    'h0   
+---------------------------------------------
+---------------------------------------------
+Name          Type               Size  Value 
+---------------------------------------------
+xtn           ahb_mxtn           -     @1811 
+  reset       integral           1     'h0   
+  trans_type  array(transfer_t)  1     -     
+    [0]       transfer_t         2     BUSY  
+  address     da(integral)       1     -     
+    [0]       integral           32    'h4   
+  trans_size  size_t             3     WORD  
+  burst_mode  burst_t            3     WRAP16
+  read_write  rw_t               1     READ  
+  write_data  da(integral)       1     -     
+    [0]       integral           32    'h0   
+  response    resp_t             2     OKAY  
+  read_data   integral           32    'h0   
+---------------------------------------------
+ERROR: Assertion failed. 
+Time: 1250 ns Started: 1250 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:302
+---------------------------------------------
+Name          Type               Size  Value 
+---------------------------------------------
+xtn           ahb_mxtn           -     @1815 
+  reset       integral           1     'h0   
+  trans_type  array(transfer_t)  1     -     
+    [0]       transfer_t         2     SEQ   
+  address     da(integral)       1     -     
+    [0]       integral           32    'h4   
+  trans_size  size_t             3     WORD  
+  burst_mode  burst_t            3     WRAP16
+  read_write  rw_t               1     READ  
+  write_data  da(integral)       1     -     
+    [0]       integral           32    'h0   
+  response    resp_t             2     OKAY  
+  read_data   integral           32    'h0   
+---------------------------------------------
+ERROR: Assertion failed. 
+Time: 1350 ns Started: 1350 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:302
+---------------------------------------------
+Name          Type               Size  Value 
+---------------------------------------------
+xtn           ahb_mxtn           -     @1819 
+  reset       integral           1     'h0   
+  trans_type  array(transfer_t)  1     -     
+    [0]       transfer_t         2     SEQ   
+  address     da(integral)       1     -     
+    [0]       integral           32    'h4   
+  trans_size  size_t             3     WORD  
+  burst_mode  burst_t            3     WRAP16
+  read_write  rw_t               1     READ  
+  write_data  da(integral)       1     -     
+    [0]       integral           32    'h0   
+  response    resp_t             2     OKAY  
+  read_data   integral           32    'h0   
+---------------------------------------------
+---------------------------------------------
+Name          Type               Size  Value 
+---------------------------------------------
+xtn           ahb_mxtn           -     @1823 
+  reset       integral           1     'h0   
+  trans_type  array(transfer_t)  1     -     
+    [0]       transfer_t         2     BUSY  
+  address     da(integral)       1     -     
+    [0]       integral           32    'h4   
+  trans_size  size_t             3     WORD  
+  burst_mode  burst_t            3     WRAP16
+  read_write  rw_t               1     READ  
+  write_data  da(integral)       1     -     
+    [0]       integral           32    'h0   
+  response    resp_t             2     OKAY  
+  read_data   integral           32    'h0   
+---------------------------------------------
+---------------------------------------------
+Name          Type               Size  Value 
+---------------------------------------------
+xtn           ahb_mxtn           -     @1827 
+  reset       integral           1     'h0   
+  trans_type  array(transfer_t)  1     -     
+    [0]       transfer_t         2     BUSY  
+  address     da(integral)       1     -     
+    [0]       integral           32    'h4   
+  trans_size  size_t             3     WORD  
+  burst_mode  burst_t            3     WRAP16
+  read_write  rw_t               1     READ  
+  write_data  da(integral)       1     -     
+    [0]       integral           32    'h0   
+  response    resp_t             2     OKAY  
+  read_data   integral           32    'h0   
+---------------------------------------------
+ERROR: Assertion failed. 
+Time: 1510 ns Started: 1510 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:302
+---------------------------------------------
+Name          Type               Size  Value 
+---------------------------------------------
+xtn           ahb_mxtn           -     @1831 
+  reset       integral           1     'h0   
+  trans_type  array(transfer_t)  1     -     
+    [0]       transfer_t         2     SEQ   
+  address     da(integral)       1     -     
+    [0]       integral           32    'h4   
+  trans_size  size_t             3     WORD  
+  burst_mode  burst_t            3     WRAP16
+  read_write  rw_t               1     READ  
+  write_data  da(integral)       1     -     
+    [0]       integral           32    'h0   
+  response    resp_t             2     OKAY  
+  read_data   integral           32    'h0   
+---------------------------------------------
+---------------------------------------------
+Name          Type               Size  Value 
+---------------------------------------------
+xtn           ahb_mxtn           -     @1835 
+  reset       integral           1     'h0   
+  trans_type  array(transfer_t)  1     -     
+    [0]       transfer_t         2     BUSY  
+  address     da(integral)       1     -     
+    [0]       integral           32    'h4   
+  trans_size  size_t             3     WORD  
+  burst_mode  burst_t            3     WRAP16
+  read_write  rw_t               1     READ  
+  write_data  da(integral)       1     -     
+    [0]       integral           32    'h0   
+  response    resp_t             2     OKAY  
+  read_data   integral           32    'h0   
+---------------------------------------------
+ERROR: Assertion failed. 
+Time: 1630 ns Started: 1630 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:302
+---------------------------------------------
+Name          Type               Size  Value 
+---------------------------------------------
+xtn           ahb_mxtn           -     @1839 
+  reset       integral           1     'h0   
+  trans_type  array(transfer_t)  1     -     
+    [0]       transfer_t         2     SEQ   
+  address     da(integral)       1     -     
+    [0]       integral           32    'h4   
+  trans_size  size_t             3     WORD  
+  burst_mode  burst_t            3     WRAP16
+  read_write  rw_t               1     READ  
+  write_data  da(integral)       1     -     
+    [0]       integral           32    'h0   
+  response    resp_t             2     OKAY  
+  read_data   integral           32    'h0   
+---------------------------------------------
+------------------------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                               
+------------------------------------------------------------------------------------------------------------
+req                            ahb_mxtn           -     @1857                                               
+  reset                        integral           1     'h1                                                 
+  trans_type                   array(transfer_t)  1     -                                                   
+    [0]                        transfer_t         2     NONSEQ                                              
+  address                      da(integral)       1     -                                                   
+    [0]                        integral           32    'he44cf7ac                                          
+  trans_size                   size_t             3     HALFWORD                                            
+  burst_mode                   burst_t            3     SINGLE                                              
+  read_write                   rw_t               1     READ                                                
+  write_data                   da(integral)       1     -                                                   
+    [0]                        integral           32    'hcdfec019                                          
+  response                     resp_t             2     OKAY                                                
+  read_data                    integral           32    'h0                                                 
+  begin_time                   time               64    1710000                                             
+  depth                        int                32    'd2                                                 
+  parent sequence (name)       string             10    crt_mseq_h                                          
+  parent sequence (full name)  string             52    uvm_test_top.env_h.master_agent_h.mseqr_h.crt_mseq_h
+  sequencer                    string             41    uvm_test_top.env_h.master_agent_h.mseqr_h           
+------------------------------------------------------------------------------------------------------------
+ERROR: Assertion failed. 
+Time: 1710 ns Started: 1710 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:302
+--------------------------------------------
+Name          Type          Size  Value     
+--------------------------------------------
+xtn           ahb_sxtn      -     @1799     
+  reset       integral      1     'h0       
+  ready       da(integral)  0     -         
+  address     da(integral)  16    -         
+    [0]       integral      32    'h1d886828
+    [1]       integral      32    'he105f0f8
+    [2]       integral      32    'h4       
+    [3]       integral      32    'h4       
+    [4]       integral      32    'h4       
+    ...       ...           ...   ...       
+    [11]      integral      32    'h4       
+    [12]      integral      32    'h4       
+    [13]      integral      32    'h4       
+    [14]      integral      32    'h4       
+    [15]      integral      32    'h4       
+  write_data  da(integral)  0     -         
+  trans_type  transfer_t    2     SEQ       
+  burst_mode  burst_t       3     WRAP16    
+  read_write  rw_t          1     READ      
+  trans_size  size_t        3     WORD      
+  read_data   da(integral)  16    -         
+    [0]       integral      32    'h0       
+    [1]       integral      32    'h0       
+    [2]       integral      32    'h0       
+    [3]       integral      32    'h0       
+    [4]       integral      32    'h0       
+    ...       ...           ...   ...       
+    [11]      integral      32    'h0       
+    [12]      integral      32    'h0       
+    [13]      integral      32    'h0       
+    [14]      integral      32    'h0       
+    [15]      integral      32    'h0       
+  response    resp_t        2     OKAY      
+--------------------------------------------
+---------------------------------------------
+Name          Type               Size  Value 
+---------------------------------------------
+xtn           ahb_mxtn           -     @1843 
+  reset       integral           1     'h0   
+  trans_type  array(transfer_t)  1     -     
+    [0]       transfer_t         2     SEQ   
+  address     da(integral)       1     -     
+    [0]       integral           32    'h4   
+  trans_size  size_t             3     WORD  
+  burst_mode  burst_t            3     WRAP16
+  read_write  rw_t               1     READ  
+  write_data  da(integral)       1     -     
+    [0]       integral           32    'h0   
+  response    resp_t             2     OKAY  
+  read_data   integral           32    'h0   
+---------------------------------------------
+------------------------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                               
+------------------------------------------------------------------------------------------------------------
+req                            ahb_mxtn           -     @1879                                               
+  reset                        integral           1     'h1                                                 
+  trans_type                   array(transfer_t)  32    -                                                   
+    [0]                        transfer_t         2     NONSEQ                                              
+    [1]                        transfer_t         2     SEQ                                                 
+    [2]                        transfer_t         2     BUSY                                                
+    [3]                        transfer_t         2     SEQ                                                 
+    [4]                        transfer_t         2     BUSY                                                
+    ...                        ...                ...   ...                                                 
+    [27]                       transfer_t         2     SEQ                                                 
+    [28]                       transfer_t         2     SEQ                                                 
+    [29]                       transfer_t         2     SEQ                                                 
+    [30]                       transfer_t         2     SEQ                                                 
+    [31]                       transfer_t         2     SEQ                                                 
+  address                      da(integral)       16    -                                                   
+    [0]                        integral           32    'h8b6bb254                                          
+    [1]                        integral           32    'h4                                                 
+    [2]                        integral           32    'h4                                                 
+    [3]                        integral           32    'h4                                                 
+    [4]                        integral           32    'h4                                                 
+    ...                        ...                ...   ...                                                 
+    [11]                       integral           32    'h4                                                 
+    [12]                       integral           32    'h4                                                 
+    [13]                       integral           32    'h4                                                 
+    [14]                       integral           32    'h4                                                 
+    [15]                       integral           32    'h4                                                 
+  trans_size                   size_t             3     WORD                                                
+  burst_mode                   burst_t            3     INCR16                                              
+  read_write                   rw_t               1     READ                                                
+  write_data                   da(integral)       16    -                                                   
+    [0]                        integral           32    'h9d073b84                                          
+    [1]                        integral           32    'he62d831d                                          
+    [2]                        integral           32    'hda87ce41                                          
+    [3]                        integral           32    'h201c6742                                          
+    [4]                        integral           32    'ha1bae55f                                          
+    ...                        ...                ...   ...                                                 
+    [11]                       integral           32    'h89c0846e                                          
+    [12]                       integral           32    'h7e803cc                                           
+    [13]                       integral           32    'h8a66a1be                                          
+    [14]                       integral           32    'hc882a552                                          
+    [15]                       integral           32    'hefeda2db                                          
+  response                     resp_t             2     OKAY                                                
+  read_data                    integral           32    'h0                                                 
+  begin_time                   time               64    1730000                                             
+  depth                        int                32    'd2                                                 
+  parent sequence (name)       string             10    crt_mseq_h                                          
+  parent sequence (full name)  string             52    uvm_test_top.env_h.master_agent_h.mseqr_h.crt_mseq_h
+  sequencer                    string             41    uvm_test_top.env_h.master_agent_h.mseqr_h           
+------------------------------------------------------------------------------------------------------------
+--------------------------------------------
+Name          Type          Size  Value     
+--------------------------------------------
+xtn           ahb_sxtn      -     @1861     
+  reset       integral      1     'h0       
+  ready       da(integral)  0     -         
+  address     da(integral)  1     -         
+    [0]       integral      32    'he44cf7ac
+  write_data  da(integral)  0     -         
+  trans_type  transfer_t    2     NONSEQ    
+  burst_mode  burst_t       3     SINGLE    
+  read_write  rw_t          1     READ      
+  trans_size  size_t        3     HALFWORD  
+  read_data   da(integral)  1     -         
+    [0]       integral      32    'h0       
+  response    resp_t        2     OKAY      
+--------------------------------------------
+-------------------------------------------------
+Name          Type               Size  Value     
+-------------------------------------------------
+xtn           ahb_mxtn           -     @1865     
+  reset       integral           1     'h0       
+  trans_type  array(transfer_t)  1     -         
+    [0]       transfer_t         2     NONSEQ    
+  address     da(integral)       1     -         
+    [0]       integral           32    'h8b6bb254
+  trans_size  size_t             3     WORD      
+  burst_mode  burst_t            3     INCR16    
+  read_write  rw_t               1     READ      
+  write_data  da(integral)       1     -         
+    [0]       integral           32    'h0       
+  response    resp_t             2     OKAY      
+  read_data   integral           32    'h0       
+-------------------------------------------------
+ERROR: Assertion failed. 
+Time: 1770 ns Started: 1770 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:292
+---------------------------------------------
+Name          Type               Size  Value 
+---------------------------------------------
+xtn           ahb_mxtn           -     @1887 
+  reset       integral           1     'h0   
+  trans_type  array(transfer_t)  1     -     
+    [0]       transfer_t         2     BUSY  
+  address     da(integral)       1     -     
+    [0]       integral           32    'h4   
+  trans_size  size_t             3     WORD  
+  burst_mode  burst_t            3     INCR16
+  read_write  rw_t               1     READ  
+  write_data  da(integral)       1     -     
+    [0]       integral           32    'h0   
+  response    resp_t             2     OKAY  
+  read_data   integral           32    'h0   
+---------------------------------------------
+---------------------------------------------
+Name          Type               Size  Value 
+---------------------------------------------
+xtn           ahb_mxtn           -     @1891 
+  reset       integral           1     'h0   
+  trans_type  array(transfer_t)  1     -     
+    [0]       transfer_t         2     BUSY  
+  address     da(integral)       1     -     
+    [0]       integral           32    'h4   
+  trans_size  size_t             3     WORD  
+  burst_mode  burst_t            3     INCR16
+  read_write  rw_t               1     READ  
+  write_data  da(integral)       1     -     
+    [0]       integral           32    'h0   
+  response    resp_t             2     OKAY  
+  read_data   integral           32    'h0   
+---------------------------------------------
+---------------------------------------------
+Name          Type               Size  Value 
+---------------------------------------------
+xtn           ahb_mxtn           -     @1895 
+  reset       integral           1     'h0   
+  trans_type  array(transfer_t)  1     -     
+    [0]       transfer_t         2     BUSY  
+  address     da(integral)       1     -     
+    [0]       integral           32    'h4   
+  trans_size  size_t             3     WORD  
+  burst_mode  burst_t            3     INCR16
+  read_write  rw_t               1     READ  
+  write_data  da(integral)       1     -     
+    [0]       integral           32    'h0   
+  response    resp_t             2     OKAY  
+  read_data   integral           32    'h0   
+---------------------------------------------
+---------------------------------------------
+Name          Type               Size  Value 
+---------------------------------------------
+xtn           ahb_mxtn           -     @1899 
+  reset       integral           1     'h0   
+  trans_type  array(transfer_t)  1     -     
+    [0]       transfer_t         2     BUSY  
+  address     da(integral)       1     -     
+    [0]       integral           32    'h4   
+  trans_size  size_t             3     WORD  
+  burst_mode  burst_t            3     INCR16
+  read_write  rw_t               1     READ  
+  write_data  da(integral)       1     -     
+    [0]       integral           32    'h0   
+  response    resp_t             2     OKAY  
+  read_data   integral           32    'h0   
+---------------------------------------------
+---------------------------------------------
+Name          Type               Size  Value 
+---------------------------------------------
+xtn           ahb_mxtn           -     @1903 
+  reset       integral           1     'h0   
+  trans_type  array(transfer_t)  1     -     
+    [0]       transfer_t         2     BUSY  
+  address     da(integral)       1     -     
+    [0]       integral           32    'h4   
+  trans_size  size_t             3     WORD  
+  burst_mode  burst_t            3     INCR16
+  read_write  rw_t               1     READ  
+  write_data  da(integral)       1     -     
+    [0]       integral           32    'h0   
+  response    resp_t             2     OKAY  
+  read_data   integral           32    'h0   
+---------------------------------------------
+---------------------------------------------
+Name          Type               Size  Value 
+---------------------------------------------
+xtn           ahb_mxtn           -     @1907 
+  reset       integral           1     'h0   
+  trans_type  array(transfer_t)  1     -     
+    [0]       transfer_t         2     BUSY  
+  address     da(integral)       1     -     
+    [0]       integral           32    'h4   
+  trans_size  size_t             3     WORD  
+  burst_mode  burst_t            3     INCR16
+  read_write  rw_t               1     READ  
+  write_data  da(integral)       1     -     
+    [0]       integral           32    'h0   
+  response    resp_t             2     OKAY  
+  read_data   integral           32    'h0   
+---------------------------------------------
+ERROR: Assertion failed. 
+Time: 2170 ns Started: 2170 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:292
+---------------------------------------------
+Name          Type               Size  Value 
+---------------------------------------------
+xtn           ahb_mxtn           -     @1911 
+  reset       integral           1     'h0   
+  trans_type  array(transfer_t)  1     -     
+    [0]       transfer_t         2     SEQ   
+  address     da(integral)       1     -     
+    [0]       integral           32    'h4   
+  trans_size  size_t             3     WORD  
+  burst_mode  burst_t            3     INCR16
+  read_write  rw_t               1     READ  
+  write_data  da(integral)       1     -     
+    [0]       integral           32    'h0   
+  response    resp_t             2     OKAY  
+  read_data   integral           32    'h0   
+---------------------------------------------
+ERROR: Assertion failed. 
+Time: 2270 ns Started: 2270 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:292
+---------------------------------------------
+Name          Type               Size  Value 
+---------------------------------------------
+xtn           ahb_mxtn           -     @1915 
+  reset       integral           1     'h0   
+  trans_type  array(transfer_t)  1     -     
+    [0]       transfer_t         2     SEQ   
+  address     da(integral)       1     -     
+    [0]       integral           32    'h4   
+  trans_size  size_t             3     WORD  
+  burst_mode  burst_t            3     INCR16
+  read_write  rw_t               1     READ  
+  write_data  da(integral)       1     -     
+    [0]       integral           32    'h0   
+  response    resp_t             2     OKAY  
+  read_data   integral           32    'h0   
+---------------------------------------------
+ERROR: Assertion failed. 
+Time: 2290 ns Started: 2290 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:292
+ERROR: Assertion failed. 
+Time: 2310 ns Started: 2310 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:292
+---------------------------------------------
+Name          Type               Size  Value 
+---------------------------------------------
+xtn           ahb_mxtn           -     @1919 
+  reset       integral           1     'h0   
+  trans_type  array(transfer_t)  1     -     
+    [0]       transfer_t         2     SEQ   
+  address     da(integral)       1     -     
+    [0]       integral           32    'h4   
+  trans_size  size_t             3     WORD  
+  burst_mode  burst_t            3     INCR16
+  read_write  rw_t               1     READ  
+  write_data  da(integral)       1     -     
+    [0]       integral           32    'h0   
+  response    resp_t             2     OKAY  
+  read_data   integral           32    'h0   
+---------------------------------------------
+ERROR: Assertion failed. 
+Time: 2330 ns Started: 2330 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:292
+ERROR: Assertion failed. 
+Time: 2350 ns Started: 2350 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:292
+---------------------------------------------
+Name          Type               Size  Value 
+---------------------------------------------
+xtn           ahb_mxtn           -     @1923 
+  reset       integral           1     'h0   
+  trans_type  array(transfer_t)  1     -     
+    [0]       transfer_t         2     SEQ   
+  address     da(integral)       1     -     
+    [0]       integral           32    'h4   
+  trans_size  size_t             3     WORD  
+  burst_mode  burst_t            3     INCR16
+  read_write  rw_t               1     READ  
+  write_data  da(integral)       1     -     
+    [0]       integral           32    'h0   
+  response    resp_t             2     OKAY  
+  read_data   integral           32    'h0   
+---------------------------------------------
+------------------------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                               
+------------------------------------------------------------------------------------------------------------
+req                            ahb_mxtn           -     @1941                                               
+  reset                        integral           1     'h1                                                 
+  trans_type                   array(transfer_t)  8     -                                                   
+    [0]                        transfer_t         2     NONSEQ                                              
+    [1]                        transfer_t         2     SEQ                                                 
+    [2]                        transfer_t         2     BUSY                                                
+    [3]                        transfer_t         2     SEQ                                                 
+    [4]                        transfer_t         2     SEQ                                                 
+    [5]                        transfer_t         2     SEQ                                                 
+    [6]                        transfer_t         2     SEQ                                                 
+    [7]                        transfer_t         2     SEQ                                                 
+  address                      da(integral)       4     -                                                   
+    [0]                        integral           32    'h3a1522de                                          
+    [1]                        integral           32    'h1                                                 
+    [2]                        integral           32    'h1                                                 
+    [3]                        integral           32    'h1                                                 
+  trans_size                   size_t             3     BYTE                                                
+  burst_mode                   burst_t            3     WRAP4                                               
+  read_write                   rw_t               1     READ                                                
+  write_data                   da(integral)       4     -                                                   
+    [0]                        integral           32    'hd2ba61cb                                          
+    [1]                        integral           32    'hd478011d                                          
+    [2]                        integral           32    'he14aaf71                                          
+    [3]                        integral           32    'hccf84a9                                           
+  response                     resp_t             2     OKAY                                                
+  read_data                    integral           32    'h0                                                 
+  begin_time                   time               64    2370000                                             
+  depth                        int                32    'd2                                                 
+  parent sequence (name)       string             10    crt_mseq_h                                          
+  parent sequence (full name)  string             52    uvm_test_top.env_h.master_agent_h.mseqr_h.crt_mseq_h
+  sequencer                    string             41    uvm_test_top.env_h.master_agent_h.mseqr_h           
+------------------------------------------------------------------------------------------------------------
+ERROR: Assertion failed. 
+Time: 2370 ns Started: 2370 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:292
+--------------------------------------------
+Name          Type          Size  Value     
+--------------------------------------------
+xtn           ahb_sxtn      -     @1883     
+  reset       integral      1     'h0       
+  ready       da(integral)  0     -         
+  address     da(integral)  16    -         
+    [0]       integral      32    'h8b6bb254
+    [1]       integral      32    'h4       
+    [2]       integral      32    'h4       
+    [3]       integral      32    'h4       
+    [4]       integral      32    'h4       
+    ...       ...           ...   ...       
+    [11]      integral      32    'h4       
+    [12]      integral      32    'h4       
+    [13]      integral      32    'h4       
+    [14]      integral      32    'h4       
+    [15]      integral      32    'h4       
+  write_data  da(integral)  0     -         
+  trans_type  transfer_t    2     SEQ       
+  burst_mode  burst_t       3     INCR16    
+  read_write  rw_t          1     READ      
+  trans_size  size_t        3     WORD      
+  read_data   da(integral)  16    -         
+    [0]       integral      32    'h0       
+    [1]       integral      32    'h0       
+    [2]       integral      32    'h0       
+    [3]       integral      32    'h0       
+    [4]       integral      32    'h0       
+    ...       ...           ...   ...       
+    [11]      integral      32    'h0       
+    [12]      integral      32    'h0       
+    [13]      integral      32    'h0       
+    [14]      integral      32    'h0       
+    [15]      integral      32    'h0       
+  response    resp_t        2     OKAY      
+--------------------------------------------
+-------------------------------------------------
+Name          Type               Size  Value     
+-------------------------------------------------
+xtn           ahb_mxtn           -     @1927     
+  reset       integral           1     'h0       
+  trans_type  array(transfer_t)  1     -         
+    [0]       transfer_t         2     NONSEQ    
+  address     da(integral)       1     -         
+    [0]       integral           32    'h3a1522de
+  trans_size  size_t             3     BYTE      
+  burst_mode  burst_t            3     WRAP4     
+  read_write  rw_t               1     READ      
+  write_data  da(integral)       1     -         
+    [0]       integral           32    'h0       
+  response    resp_t             2     OKAY      
+  read_data   integral           32    'h0       
+-------------------------------------------------
+ERROR: Assertion failed. 
+Time: 2410 ns Started: 2410 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:294
+--------------------------------------------
+Name          Type               Size  Value
+--------------------------------------------
+xtn           ahb_mxtn           -     @1949
+  reset       integral           1     'h0  
+  trans_type  array(transfer_t)  1     -    
+    [0]       transfer_t         2     BUSY 
+  address     da(integral)       1     -    
+    [0]       integral           32    'h1  
+  trans_size  size_t             3     BYTE 
+  burst_mode  burst_t            3     WRAP4
+  read_write  rw_t               1     READ 
+  write_data  da(integral)       1     -    
+    [0]       integral           32    'h0  
+  response    resp_t             2     OKAY 
+  read_data   integral           32    'h0  
+--------------------------------------------
+------------------------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                               
+------------------------------------------------------------------------------------------------------------
+req                            ahb_mxtn           -     @1967                                               
+  reset                        integral           1     'h1                                                 
+  trans_type                   array(transfer_t)  1     -                                                   
+    [0]                        transfer_t         2     IDLE                                                
+  address                      da(integral)       1     -                                                   
+    [0]                        integral           32    'hfc702636                                          
+  trans_size                   size_t             3     HALFWORD                                            
+  burst_mode                   burst_t            3     SINGLE                                              
+  read_write                   rw_t               1     WRITE                                               
+  write_data                   da(integral)       1     -                                                   
+    [0]                        integral           32    'hcf6e422a                                          
+  response                     resp_t             2     OKAY                                                
+  read_data                    integral           32    'h0                                                 
+  begin_time                   time               64    2470000                                             
+  depth                        int                32    'd2                                                 
+  parent sequence (name)       string             10    crt_mseq_h                                          
+  parent sequence (full name)  string             52    uvm_test_top.env_h.master_agent_h.mseqr_h.crt_mseq_h
+  sequencer                    string             41    uvm_test_top.env_h.master_agent_h.mseqr_h           
+------------------------------------------------------------------------------------------------------------
+ERROR: Assertion failed. 
+Time: 2470 ns Started: 2470 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:294
+--------------------------------------------
+Name          Type          Size  Value     
+--------------------------------------------
+xtn           ahb_sxtn      -     @1945     
+  reset       integral      1     'h0       
+  ready       da(integral)  0     -         
+  address     da(integral)  4     -         
+    [0]       integral      32    'h3a1522de
+    [1]       integral      32    'h1       
+    [2]       integral      32    'h1       
+    [3]       integral      32    'h1       
+  write_data  da(integral)  0     -         
+  trans_type  transfer_t    2     SEQ       
+  burst_mode  burst_t       3     WRAP4     
+  read_write  rw_t          1     READ      
+  trans_size  size_t        3     BYTE      
+  read_data   da(integral)  4     -         
+    [0]       integral      32    'h0       
+    [1]       integral      32    'h0       
+    [2]       integral      32    'h0       
+    [3]       integral      32    'h0       
+  response    resp_t        2     OKAY      
+--------------------------------------------
+--------------------------------------------
+Name          Type               Size  Value
+--------------------------------------------
+xtn           ahb_mxtn           -     @1953
+  reset       integral           1     'h0  
+  trans_type  array(transfer_t)  1     -    
+    [0]       transfer_t         2     SEQ  
+  address     da(integral)       1     -    
+    [0]       integral           32    'h1  
+  trans_size  size_t             3     BYTE 
+  burst_mode  burst_t            3     WRAP4
+  read_write  rw_t               1     READ 
+  write_data  da(integral)       1     -    
+    [0]       integral           32    'h0  
+  response    resp_t             2     OKAY 
+  read_data   integral           32    'h0  
+--------------------------------------------
+------------------------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                               
+------------------------------------------------------------------------------------------------------------
+req                            ahb_mxtn           -     @1989                                               
+  reset                        integral           1     'h1                                                 
+  trans_type                   array(transfer_t)  32    -                                                   
+    [0]                        transfer_t         2     NONSEQ                                              
+    [1]                        transfer_t         2     SEQ                                                 
+    [2]                        transfer_t         2     BUSY                                                
+    [3]                        transfer_t         2     BUSY                                                
+    [4]                        transfer_t         2     BUSY                                                
+    ...                        ...                ...   ...                                                 
+    [27]                       transfer_t         2     SEQ                                                 
+    [28]                       transfer_t         2     SEQ                                                 
+    [29]                       transfer_t         2     SEQ                                                 
+    [30]                       transfer_t         2     SEQ                                                 
+    [31]                       transfer_t         2     SEQ                                                 
+  address                      da(integral)       16    -                                                   
+    [0]                        integral           32    'h69e226                                            
+    [1]                        integral           32    'h2                                                 
+    [2]                        integral           32    'h2                                                 
+    [3]                        integral           32    'h2                                                 
+    [4]                        integral           32    'h2                                                 
+    ...                        ...                ...   ...                                                 
+    [11]                       integral           32    'h2                                                 
+    [12]                       integral           32    'h2                                                 
+    [13]                       integral           32    'h2                                                 
+    [14]                       integral           32    'h2                                                 
+    [15]                       integral           32    'h2                                                 
+  trans_size                   size_t             3     HALFWORD                                            
+  burst_mode                   burst_t            3     WRAP16                                              
+  read_write                   rw_t               1     READ                                                
+  write_data                   da(integral)       16    -                                                   
+    [0]                        integral           32    'hbc10226a                                          
+    [1]                        integral           32    'ha28b901c                                          
+    [2]                        integral           32    'hcbf125d2                                          
+    [3]                        integral           32    'h94aeeb27                                          
+    [4]                        integral           32    'haefbb475                                          
+    ...                        ...                ...   ...                                                 
+    [11]                       integral           32    'hf3714481                                          
+    [12]                       integral           32    'h8b856fb6                                          
+    [13]                       integral           32    'h1d650bfd                                          
+    [14]                       integral           32    'hde7d1b61                                          
+    [15]                       integral           32    'hcffaffc2                                          
+  response                     resp_t             2     OKAY                                                
+  read_data                    integral           32    'h0                                                 
+  begin_time                   time               64    2490000                                             
+  depth                        int                32    'd2                                                 
+  parent sequence (name)       string             10    crt_mseq_h                                          
+  parent sequence (full name)  string             52    uvm_test_top.env_h.master_agent_h.mseqr_h.crt_mseq_h
+  sequencer                    string             41    uvm_test_top.env_h.master_agent_h.mseqr_h           
+------------------------------------------------------------------------------------------------------------
+ERROR: Assertion failed. 
+Time: 2530 ns Started: 2530 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:301
+-----------------------------------------------
+Name          Type               Size  Value   
+-----------------------------------------------
+xtn           ahb_mxtn           -     @1993   
+  reset       integral           1     'h0     
+  trans_type  array(transfer_t)  1     -       
+    [0]       transfer_t         2     SEQ     
+  address     da(integral)       1     -       
+    [0]       integral           32    'h2     
+  trans_size  size_t             3     HALFWORD
+  burst_mode  burst_t            3     WRAP16  
+  read_write  rw_t               1     READ    
+  write_data  da(integral)       1     -       
+    [0]       integral           32    'h0     
+  response    resp_t             2     OKAY    
+  read_data   integral           32    'h0     
+-----------------------------------------------
+-----------------------------------------------
+Name          Type               Size  Value   
+-----------------------------------------------
+xtn           ahb_mxtn           -     @2001   
+  reset       integral           1     'h0     
+  trans_type  array(transfer_t)  1     -       
+    [0]       transfer_t         2     BUSY    
+  address     da(integral)       1     -       
+    [0]       integral           32    'h2     
+  trans_size  size_t             3     HALFWORD
+  burst_mode  burst_t            3     WRAP16  
+  read_write  rw_t               1     READ    
+  write_data  da(integral)       1     -       
+    [0]       integral           32    'h0     
+  response    resp_t             2     OKAY    
+  read_data   integral           32    'h0     
+-----------------------------------------------
+ERROR: Assertion failed. 
+Time: 2670 ns Started: 2670 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:301
+-----------------------------------------------
+Name          Type               Size  Value   
+-----------------------------------------------
+xtn           ahb_mxtn           -     @2005   
+  reset       integral           1     'h0     
+  trans_type  array(transfer_t)  1     -       
+    [0]       transfer_t         2     SEQ     
+  address     da(integral)       1     -       
+    [0]       integral           32    'h2     
+  trans_size  size_t             3     HALFWORD
+  burst_mode  burst_t            3     WRAP16  
+  read_write  rw_t               1     READ    
+  write_data  da(integral)       1     -       
+    [0]       integral           32    'h0     
+  response    resp_t             2     OKAY    
+  read_data   integral           32    'h0     
+-----------------------------------------------
+ERROR: Assertion failed. 
+Time: 2690 ns Started: 2690 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:301
+-----------------------------------------------
+Name          Type               Size  Value   
+-----------------------------------------------
+xtn           ahb_mxtn           -     @2009   
+  reset       integral           1     'h0     
+  trans_type  array(transfer_t)  1     -       
+    [0]       transfer_t         2     BUSY    
+  address     da(integral)       1     -       
+    [0]       integral           32    'h2     
+  trans_size  size_t             3     HALFWORD
+  burst_mode  burst_t            3     WRAP16  
+  read_write  rw_t               1     READ    
+  write_data  da(integral)       1     -       
+    [0]       integral           32    'h0     
+  response    resp_t             2     OKAY    
+  read_data   integral           32    'h0     
+-----------------------------------------------
+ERROR: Assertion failed. 
+Time: 2750 ns Started: 2750 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:301
+-----------------------------------------------
+Name          Type               Size  Value   
+-----------------------------------------------
+xtn           ahb_mxtn           -     @2013   
+  reset       integral           1     'h0     
+  trans_type  array(transfer_t)  1     -       
+    [0]       transfer_t         2     SEQ     
+  address     da(integral)       1     -       
+    [0]       integral           32    'h2     
+  trans_size  size_t             3     HALFWORD
+  burst_mode  burst_t            3     WRAP16  
+  read_write  rw_t               1     READ    
+  write_data  da(integral)       1     -       
+    [0]       integral           32    'h0     
+  response    resp_t             2     OKAY    
+  read_data   integral           32    'h0     
+-----------------------------------------------
+ERROR: Assertion failed. 
+Time: 2770 ns Started: 2770 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:301
+ERROR: Assertion failed. 
+Time: 2790 ns Started: 2790 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:301
+-----------------------------------------------
+Name          Type               Size  Value   
+-----------------------------------------------
+xtn           ahb_mxtn           -     @2017   
+  reset       integral           1     'h0     
+  trans_type  array(transfer_t)  1     -       
+    [0]       transfer_t         2     SEQ     
+  address     da(integral)       1     -       
+    [0]       integral           32    'h2     
+  trans_size  size_t             3     HALFWORD
+  burst_mode  burst_t            3     WRAP16  
+  read_write  rw_t               1     READ    
+  write_data  da(integral)       1     -       
+    [0]       integral           32    'h0     
+  response    resp_t             2     OKAY    
+  read_data   integral           32    'h0     
+-----------------------------------------------
+ERROR: Assertion failed. 
+Time: 2810 ns Started: 2810 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:301
+ERROR: Assertion failed. 
+Time: 2830 ns Started: 2830 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:301
+-----------------------------------------------
+Name          Type               Size  Value   
+-----------------------------------------------
+xtn           ahb_mxtn           -     @2021   
+  reset       integral           1     'h0     
+  trans_type  array(transfer_t)  1     -       
+    [0]       transfer_t         2     SEQ     
+  address     da(integral)       1     -       
+    [0]       integral           32    'h2     
+  trans_size  size_t             3     HALFWORD
+  burst_mode  burst_t            3     WRAP16  
+  read_write  rw_t               1     READ    
+  write_data  da(integral)       1     -       
+    [0]       integral           32    'h0     
+  response    resp_t             2     OKAY    
+  read_data   integral           32    'h0     
+-----------------------------------------------
+ERROR: Assertion failed. 
+Time: 2890 ns Started: 2890 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:301
+-----------------------------------------------
+Name          Type               Size  Value   
+-----------------------------------------------
+xtn           ahb_mxtn           -     @2025   
+  reset       integral           1     'h0     
+  trans_type  array(transfer_t)  1     -       
+    [0]       transfer_t         2     SEQ     
+  address     da(integral)       1     -       
+    [0]       integral           32    'h2     
+  trans_size  size_t             3     HALFWORD
+  burst_mode  burst_t            3     WRAP16  
+  read_write  rw_t               1     READ    
+  write_data  da(integral)       1     -       
+    [0]       integral           32    'h0     
+  response    resp_t             2     OKAY    
+  read_data   integral           32    'h0     
+-----------------------------------------------
+------------------------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                               
+------------------------------------------------------------------------------------------------------------
+req                            ahb_mxtn           -     @2043                                               
+  reset                        integral           1     'h1                                                 
+  trans_type                   array(transfer_t)  32    -                                                   
+    [0]                        transfer_t         2     NONSEQ                                              
+    [1]                        transfer_t         2     SEQ                                                 
+    [2]                        transfer_t         2     SEQ                                                 
+    [3]                        transfer_t         2     SEQ                                                 
+    [4]                        transfer_t         2     SEQ                                                 
+    ...                        ...                ...   ...                                                 
+    [27]                       transfer_t         2     SEQ                                                 
+    [28]                       transfer_t         2     SEQ                                                 
+    [29]                       transfer_t         2     SEQ                                                 
+    [30]                       transfer_t         2     SEQ                                                 
+    [31]                       transfer_t         2     SEQ                                                 
+  address                      da(integral)       16    -                                                   
+    [0]                        integral           32    'hd92a28c0                                          
+    [1]                        integral           32    'h170a3d45                                          
+    [2]                        integral           32    'h5                                                 
+    [3]                        integral           32    'h5                                                 
+    [4]                        integral           32    'h5                                                 
+    ...                        ...                ...   ...                                                 
+    [11]                       integral           32    'h5                                                 
+    [12]                       integral           32    'h5                                                 
+    [13]                       integral           32    'h5                                                 
+    [14]                       integral           32    'h5                                                 
+    [15]                       integral           32    'h5                                                 
+  trans_size                   size_t             3     BYTE                                                
+  burst_mode                   burst_t            3     WRAP16                                              
+  read_write                   rw_t               1     WRITE                                               
+  write_data                   da(integral)       16    -                                                   
+    [0]                        integral           32    'hf434d4a                                           
+    [1]                        integral           32    'h3ab5e8aa                                          
+    [2]                        integral           32    'h8e3d2d9c                                          
+    [3]                        integral           32    'hb03293d4                                          
+    [4]                        integral           32    'h311abb4c                                          
+    ...                        ...                ...   ...                                                 
+    [11]                       integral           32    'h68d100a                                           
+    [12]                       integral           32    'h733077a                                           
+    [13]                       integral           32    'hceca0a34                                          
+    [14]                       integral           32    'hc6eb18a0                                          
+    [15]                       integral           32    'hdca55c38                                          
+  response                     resp_t             2     OKAY                                                
+  read_data                    integral           32    'h0                                                 
+  begin_time                   time               64    2950000                                             
+  depth                        int                32    'd2                                                 
+  parent sequence (name)       string             10    crt_mseq_h                                          
+  parent sequence (full name)  string             52    uvm_test_top.env_h.master_agent_h.mseqr_h.crt_mseq_h
+  sequencer                    string             41    uvm_test_top.env_h.master_agent_h.mseqr_h           
+------------------------------------------------------------------------------------------------------------
+ERROR: Assertion failed. 
+Time: 2950 ns Started: 2950 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:301
+------------------------------------------
+Name          Type          Size  Value   
+------------------------------------------
+xtn           ahb_sxtn      -     @1997   
+  reset       integral      1     'h0     
+  ready       da(integral)  0     -       
+  address     da(integral)  16    -       
+    [0]       integral      32    'h69e226
+    [1]       integral      32    'h2     
+    [2]       integral      32    'h2     
+    [3]       integral      32    'h2     
+    [4]       integral      32    'h2     
+    ...       ...           ...   ...     
+    [11]      integral      32    'h2     
+    [12]      integral      32    'h2     
+    [13]      integral      32    'h2     
+    [14]      integral      32    'h2     
+    [15]      integral      32    'h2     
+  write_data  da(integral)  0     -       
+  trans_type  transfer_t    2     SEQ     
+  burst_mode  burst_t       3     WRAP16  
+  read_write  rw_t          1     READ    
+  trans_size  size_t        3     HALFWORD
+  read_data   da(integral)  16    -       
+    [0]       integral      32    'h0     
+    [1]       integral      32    'h0     
+    [2]       integral      32    'h0     
+    [3]       integral      32    'h0     
+    [4]       integral      32    'h0     
+    ...       ...           ...   ...     
+    [11]      integral      32    'h0     
+    [12]      integral      32    'h0     
+    [13]      integral      32    'h0     
+    [14]      integral      32    'h0     
+    [15]      integral      32    'h0     
+  response    resp_t        2     OKAY    
+------------------------------------------
+-----------------------------------------------
+Name          Type               Size  Value   
+-----------------------------------------------
+xtn           ahb_mxtn           -     @2029   
+  reset       integral           1     'h0     
+  trans_type  array(transfer_t)  1     -       
+    [0]       transfer_t         2     SEQ     
+  address     da(integral)       1     -       
+    [0]       integral           32    'h2     
+  trans_size  size_t             3     HALFWORD
+  burst_mode  burst_t            3     WRAP16  
+  read_write  rw_t               1     READ    
+  write_data  da(integral)       1     -       
+    [0]       integral           32    'h0     
+  response    resp_t             2     OKAY    
+  read_data   integral           32    'h0     
+-----------------------------------------------
+ERROR: Assertion failed. 
+Time: 2990 ns Started: 2990 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:300
+-------------------------------------------------
+Name          Type               Size  Value     
+-------------------------------------------------
+xtn           ahb_mxtn           -     @2051     
+  reset       integral           1     'h0       
+  trans_type  array(transfer_t)  1     -         
+    [0]       transfer_t         2     SEQ       
+  address     da(integral)       1     -         
+    [0]       integral           32    'h170a3d45
+  trans_size  size_t             3     BYTE      
+  burst_mode  burst_t            3     WRAP16    
+  read_write  rw_t               1     WRITE     
+  write_data  da(integral)       1     -         
+    [0]       integral           32    'h3ab5e8aa
+  response    resp_t             2     OKAY      
+  read_data   integral           32    'h0       
+-------------------------------------------------
+ERROR: Assertion failed. 
+Time: 3010 ns Started: 3010 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:300
+ERROR: Assertion failed. 
+Time: 3030 ns Started: 3030 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:300
+-------------------------------------------------
+Name          Type               Size  Value     
+-------------------------------------------------
+xtn           ahb_mxtn           -     @2055     
+  reset       integral           1     'h0       
+  trans_type  array(transfer_t)  1     -         
+    [0]       transfer_t         2     SEQ       
+  address     da(integral)       1     -         
+    [0]       integral           32    'h5       
+  trans_size  size_t             3     BYTE      
+  burst_mode  burst_t            3     WRAP16    
+  read_write  rw_t               1     WRITE     
+  write_data  da(integral)       1     -         
+    [0]       integral           32    'hb03293d4
+  response    resp_t             2     OKAY      
+  read_data   integral           32    'h0       
+-------------------------------------------------
+ERROR: Assertion failed. 
+Time: 3050 ns Started: 3050 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:300
+ERROR: Assertion failed. 
+Time: 3070 ns Started: 3070 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:300
+-------------------------------------------------
+Name          Type               Size  Value     
+-------------------------------------------------
+xtn           ahb_mxtn           -     @2059     
+  reset       integral           1     'h0       
+  trans_type  array(transfer_t)  1     -         
+    [0]       transfer_t         2     SEQ       
+  address     da(integral)       1     -         
+    [0]       integral           32    'h5       
+  trans_size  size_t             3     BYTE      
+  burst_mode  burst_t            3     WRAP16    
+  read_write  rw_t               1     WRITE     
+  write_data  da(integral)       1     -         
+    [0]       integral           32    'h1abc6c14
+  response    resp_t             2     OKAY      
+  read_data   integral           32    'h0       
+-------------------------------------------------
+ERROR: Assertion failed. 
+Time: 3090 ns Started: 3090 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:300
+ERROR: Assertion failed. 
+Time: 3110 ns Started: 3110 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:300
+-------------------------------------------------
+Name          Type               Size  Value     
+-------------------------------------------------
+xtn           ahb_mxtn           -     @2063     
+  reset       integral           1     'h0       
+  trans_type  array(transfer_t)  1     -         
+    [0]       transfer_t         2     SEQ       
+  address     da(integral)       1     -         
+    [0]       integral           32    'h5       
+  trans_size  size_t             3     BYTE      
+  burst_mode  burst_t            3     WRAP16    
+  read_write  rw_t               1     WRITE     
+  write_data  da(integral)       1     -         
+    [0]       integral           32    'hc05e0896
+  response    resp_t             2     OKAY      
+  read_data   integral           32    'h0       
+-------------------------------------------------
+ERROR: Assertion failed. 
+Time: 3130 ns Started: 3130 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:300
+ERROR: Assertion failed. 
+Time: 3150 ns Started: 3150 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:300
+-------------------------------------------------
+Name          Type               Size  Value     
+-------------------------------------------------
+xtn           ahb_mxtn           -     @2067     
+  reset       integral           1     'h0       
+  trans_type  array(transfer_t)  1     -         
+    [0]       transfer_t         2     SEQ       
+  address     da(integral)       1     -         
+    [0]       integral           32    'h5       
+  trans_size  size_t             3     BYTE      
+  burst_mode  burst_t            3     WRAP16    
+  read_write  rw_t               1     WRITE     
+  write_data  da(integral)       1     -         
+    [0]       integral           32    'hec769b66
+  response    resp_t             2     OKAY      
+  read_data   integral           32    'h0       
+-------------------------------------------------
+ERROR: Assertion failed. 
+Time: 3170 ns Started: 3170 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:300
+-------------------------------------------------
+Name          Type               Size  Value     
+-------------------------------------------------
+xtn           ahb_mxtn           -     @2071     
+  reset       integral           1     'h0       
+  trans_type  array(transfer_t)  1     -         
+    [0]       transfer_t         2     BUSY      
+  address     da(integral)       1     -         
+    [0]       integral           32    'h5       
+  trans_size  size_t             3     BYTE      
+  burst_mode  burst_t            3     WRAP16    
+  read_write  rw_t               1     WRITE     
+  write_data  da(integral)       1     -         
+    [0]       integral           32    'hf0909c6a
+  response    resp_t             2     OKAY      
+  read_data   integral           32    'h0       
+-------------------------------------------------
+ERROR: Assertion failed. 
+Time: 3230 ns Started: 3230 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:300
+------------------------------------------------
+Name          Type               Size  Value    
+------------------------------------------------
+xtn           ahb_mxtn           -     @2075    
+  reset       integral           1     'h0      
+  trans_type  array(transfer_t)  1     -        
+    [0]       transfer_t         2     SEQ      
+  address     da(integral)       1     -        
+    [0]       integral           32    'h5      
+  trans_size  size_t             3     BYTE     
+  burst_mode  burst_t            3     WRAP16   
+  read_write  rw_t               1     WRITE    
+  write_data  da(integral)       1     -        
+    [0]       integral           32    'h733077a
+  response    resp_t             2     OKAY     
+  read_data   integral           32    'h0      
+------------------------------------------------
+ERROR: Assertion failed. 
+Time: 3290 ns Started: 3290 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:300
+-------------------------------------------------
+Name          Type               Size  Value     
+-------------------------------------------------
+xtn           ahb_mxtn           -     @2079     
+  reset       integral           1     'h0       
+  trans_type  array(transfer_t)  1     -         
+    [0]       transfer_t         2     SEQ       
+  address     da(integral)       1     -         
+    [0]       integral           32    'h5       
+  trans_size  size_t             3     BYTE      
+  burst_mode  burst_t            3     WRAP16    
+  read_write  rw_t               1     WRITE     
+  write_data  da(integral)       1     -         
+    [0]       integral           32    'hc6eb18a0
+  response    resp_t             2     OKAY      
+  read_data   integral           32    'h0       
+-------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                               
+------------------------------------------------------------------------------------------------------------
+req                            ahb_mxtn           -     @2097                                               
+  reset                        integral           1     'h1                                                 
+  trans_type                   array(transfer_t)  1     -                                                   
+    [0]                        transfer_t         2     NONSEQ                                              
+  address                      da(integral)       1     -                                                   
+    [0]                        integral           32    'haf251e68                                          
+  trans_size                   size_t             3     WORD                                                
+  burst_mode                   burst_t            3     SINGLE                                              
+  read_write                   rw_t               1     WRITE                                               
+  write_data                   da(integral)       1     -                                                   
+    [0]                        integral           32    'hdf2230f                                           
+  response                     resp_t             2     OKAY                                                
+  read_data                    integral           32    'h0                                                 
+  begin_time                   time               64    3310000                                             
+  depth                        int                32    'd2                                                 
+  parent sequence (name)       string             10    crt_mseq_h                                          
+  parent sequence (full name)  string             52    uvm_test_top.env_h.master_agent_h.mseqr_h.crt_mseq_h
+  sequencer                    string             41    uvm_test_top.env_h.master_agent_h.mseqr_h           
+------------------------------------------------------------------------------------------------------------
+ERROR: Assertion failed. 
+Time: 3310 ns Started: 3310 ns Scope: /top/intf File: /home/beratgokaytopcu/Documents/UVM Examples/projects/ahb2_uvm_tb/rtl/ahb_intf.sv Line:300
+--------------------------------------------
+Name          Type          Size  Value     
+--------------------------------------------
+xtn           ahb_sxtn      -     @2047     
+  reset       integral      1     'h0       
+  ready       da(integral)  0     -         
+  address     da(integral)  16    -         
+    [0]       integral      32    'hd92a28c0
+    [1]       integral      32    'h170a3d45
+    [2]       integral      32    'h5       
+    [3]       integral      32    'h5       
+    [4]       integral      32    'h5       
+    ...       ...           ...   ...       
+    [11]      integral      32    'h5       
+    [12]      integral      32    'h5       
+    [13]      integral      32    'h5       
+    [14]      integral      32    'h5       
+    [15]      integral      32    'h5       
+  write_data  da(integral)  16    -         
+    [0]       integral      32    'hf434d4a 
+    [1]       integral      32    'h3ab5e8aa
+    [2]       integral      32    'h8e3d2d9c
+    [3]       integral      32    'hb03293d4
+    [4]       integral      32    'h311abb4c
+    ...       ...           ...   ...       
+    [11]      integral      32    'h68d100a 
+    [12]      integral      32    'h733077a 
+    [13]      integral      32    'hceca0a34
+    [14]      integral      32    'hc6eb18a0
+    [15]      integral      32    'hdca55c38
+  trans_type  transfer_t    2     SEQ       
+  burst_mode  burst_t       3     WRAP16    
+  read_write  rw_t          1     WRITE     
+  trans_size  size_t        3     BYTE      
+  read_data   da(integral)  0     -         
+  response    resp_t        2     OKAY      
+--------------------------------------------
+-------------------------------------------------------------------------------------------------------------
+Name                           Type               Size  Value                                                
+-------------------------------------------------------------------------------------------------------------
+req                            ahb_mxtn           -     @2119                                                
+  reset                        integral           1     'h1                                                  
+  trans_type                   array(transfer_t)  1     -                                                    
+    [0]                        transfer_t         2     IDLE                                                 
+  address                      da(integral)       1     -                                                    
+    [0]                        integral           32    'hfb543980                                           
+  trans_size                   size_t             3     WORD                                                 
+  burst_mode                   burst_t            3     SINGLE                                               
+  read_write                   rw_t               1     WRITE                                                
+  write_data                   da(integral)       1     -                                                    
+    [0]                        integral           32    'hecc42c90                                           
+  response                     resp_t             2     OKAY                                                 
+  read_data                    integral           32    'h0                                                  
+  begin_time                   time               64    3330000                                              
+  depth                        int                32    'd2                                                  
+  parent sequence (name)       string             11    idle_mseq_h                                          
+  parent sequence (full name)  string             53    uvm_test_top.env_h.master_agent_h.mseqr_h.idle_mseq_h
+  sequencer                    string             41    uvm_test_top.env_h.master_agent_h.mseqr_h            
+-------------------------------------------------------------------------------------------------------------
+-------------------------------------------------
+Name          Type               Size  Value     
+-------------------------------------------------
+xtn           ahb_mxtn           -     @2083     
+  reset       integral           1     'h0       
+  trans_type  array(transfer_t)  1     -         
+    [0]       transfer_t         2     NONSEQ    
+  address     da(integral)       1     -         
+    [0]       integral           32    'haf251e68
+  trans_size  size_t             3     WORD      
+  burst_mode  burst_t            3     SINGLE    
+  read_write  rw_t               1     WRITE     
+  write_data  da(integral)       1     -         
+    [0]       integral           32    'hdf2230f 
+  response    resp_t             2     OKAY      
+  read_data   integral           32    'h0       
+-------------------------------------------------
+--------------------------------------------
+Name          Type          Size  Value     
+--------------------------------------------
+xtn           ahb_sxtn      -     @2101     
+  reset       integral      1     'h0       
+  ready       da(integral)  0     -         
+  address     da(integral)  1     -         
+    [0]       integral      32    'haf251e68
+  write_data  da(integral)  1     -         
+    [0]       integral      32    'hdf2230f 
+  trans_type  transfer_t    2     NONSEQ    
+  burst_mode  burst_t       3     SINGLE    
+  read_write  rw_t          1     WRITE     
+  trans_size  size_t        3     WORD      
+  read_data   da(integral)  0     -         
+  response    resp_t        2     OKAY      
+--------------------------------------------
+UVM_INFO /tools/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(19968) @ 3450000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /tools/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(13673) @ 3450000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    5
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[NO_DPI_TSTNAME]     1
+[RNTST]     1
+[TEST_DONE]     1
+[UVM/COMP/NAMECHECK]     1
+[UVM/RELNOTES]     1
+
+$finish called at time : 3450 ns : File "/tools/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 20 20:15:32 2025...

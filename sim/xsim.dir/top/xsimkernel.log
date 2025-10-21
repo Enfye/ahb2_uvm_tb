@@ -1,0 +1,7 @@
+Running: xsim.dir/top/xsimk -wdb ahb_crt_test.wdb -runall -sv_seed 16422201 -simmode gui -testplusarg UVM_OBJECTION_TRACE -testplusarg UVM_TESTNAME=ahb_crt_test -testplusarg UVM_VERBOSITY=UVM_LOW -simrunnum 0 -socket 54709
+Design successfully loaded
+Design Loading Memory Usage: 192912 KB (Peak: 192920 KB)
+Design Loading CPU Usage: 710 ms
+Simulation completed
+Simulation Memory Usage: 279716 KB (Peak: 332180 KB)
+Simulation CPU Usage: 870 ms
