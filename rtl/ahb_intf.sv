@@ -282,32 +282,32 @@ interface ahb_intf(input logic HCLK);
         endproperty
 
 
-        // NO_BUSY: assume property(no_busy_p);
-        // BUSY_IDLE: assume property(busy_idle_p);
-        // IDLE_OK: assume property(idle_okay_p);
-        // BUSY_WRITE: assume property(busy_write_p);
-        // BUSY_READ: assume property(busy_read_p);
-        // ONE_KB: assume property(kb_boundry_p);
+        NO_BUSY: assume property(no_busy_p);
+        BUSY_IDLE: assume property(busy_idle_p);
+        IDLE_OK: assume property(idle_okay_p);
+        BUSY_WRITE: assume property(busy_write_p);
+        BUSY_READ: assume property(busy_read_p);
+        ONE_KB: assume property(kb_boundry_p);
 
-        // INCR_ADDR: assume property(incr_addr_p);
+        INCR_ADDR: assume property(incr_addr_p);
 
-        // WRAP4_SIZE0: assume property(wrap4_size0_addr_p);
-        // WRAP4_SIZE1: assume property(wrap4_size1_addr_p);
-        // WRAP4_SIZE2: assume property(wrap4_size2_addr_p);
-        // WRAP8_SIZE0: assume property(wrap8_size0_addr_p);
-        // WRAP8_SIZE1: assume property(wrap8_size1_addr_p);
-        // WRAP8_SIZE2: assume property(wrap8_size2_addr_p);
-        // WRAP16_SIZE0: assume property(wrap16_size0_addr_p);
-        // WRAP16_SIZE1: assume property(wrap16_size1_addr_p);
-        // WRAP16_SIZE2: assume property(wrap16_size2_addr_p);
+        WRAP4_SIZE0: assume property(wrap4_size0_addr_p);
+        WRAP4_SIZE1: assume property(wrap4_size1_addr_p);
+        WRAP4_SIZE2: assume property(wrap4_size2_addr_p);
+        WRAP8_SIZE0: assume property(wrap8_size0_addr_p);
+        WRAP8_SIZE1: assume property(wrap8_size1_addr_p);
+        WRAP8_SIZE2: assume property(wrap8_size2_addr_p);
+        WRAP16_SIZE0: assume property(wrap16_size0_addr_p);
+        WRAP16_SIZE1: assume property(wrap16_size1_addr_p);
+        WRAP16_SIZE2: assume property(wrap16_size2_addr_p);
 
-        // SIZE1_ADDR_BOUD: assume property(size1_addr_p);
-        // SIZE2_ADDR_BOUD: assume property(size2_addr_p);
-        // SIZE3_ADDR_BOUD: assume property(size3_addr_p);
-        // SIZE4_ADDR_BOUD: assume property(size4_addr_p);
-        // SIZE5_ADDR_BOUD: assume property(size5_addr_p);
-        // SIZE6_ADDR_BOUD: assume property(size6_addr_p);
-        // SIZE7_ADDR_BOUD: assume property(size7_addr_p);
+        SIZE1_ADDR_BOUD: assume property(size1_addr_p);
+        SIZE2_ADDR_BOUD: assume property(size2_addr_p);
+        SIZE3_ADDR_BOUD: assume property(size3_addr_p);
+        SIZE4_ADDR_BOUD: assume property(size4_addr_p);
+        SIZE5_ADDR_BOUD: assume property(size5_addr_p);
+        SIZE6_ADDR_BOUD: assume property(size6_addr_p);
+        SIZE7_ADDR_BOUD: assume property(size7_addr_p);
 
 endinterface
 
